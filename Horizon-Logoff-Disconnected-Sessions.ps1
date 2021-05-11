@@ -207,8 +207,7 @@ if ($newsessions.count -eq 0)
 $newsessions | Format-table -AutoSize -Property @{Name = 'Session Start Time'; Expression = {[System.TimeZoneInfo]::ConvertTimeFromUtc($_.sessiondata.startTime,$tzone)}},@{Name = 'Session State'; Expression = {$_.sessiondata.sessionstate}},@{Name = 'Session Disconnect Time'; Expression = {[System.TimeZoneInfo]::ConvertTimeFromUtc($_.sessiondata.DisconnectTime,$tzone)}},@{Name = 'Username'; Expression = {$_.namesdata.username}},@{Name = 'Pool Name'; Expression = {$_.namesdata.desktopname}},@{Name = 'Machine Name'; Expression = {$_.namesdata.machineorrdsservername}}`
 
 Write-Host "Press '1' to Logoff all sessions"
-Write-Host "Press '2' to Send a Message to all sessions"
-Write-Host "Press '3' to exit without making changes"
+Write-Host "Press '2' to exit without making changes"
 $selection = Read-Host "Please make a selection"
 
 switch ($selection)
@@ -227,25 +226,11 @@ switch ($selection)
 
 '2' {
 
- $smessage = Read-Host -Prompt 'Enter the message to send to the users sessions'
-
-  foreach ($item in $newsessions) 
-  
-  {
-     SendMessage_User $item $smessage
-  }
-
-}
-
-'4'
-{
- 
   break
 
 }
-       
- 
-} 
+
+}
 }
 
 function Show-Menu
