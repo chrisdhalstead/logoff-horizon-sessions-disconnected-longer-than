@@ -233,6 +233,23 @@ switch ($selection)
 }
 }
 
+function ForceLogoff_User {
+ 
+  try {
+             
+   
+     $script:hvServices.session.Session_LogoffForced($args[0].id)
+
+    }        
+           
+    catch {
+      Write-Host "An error occurred when Logging Off sessions $_"
+     break 
+    }
+
+    write-host "Logged off session" $args[0].id.id
+}
+
 function Show-Menu
   {
     param (
