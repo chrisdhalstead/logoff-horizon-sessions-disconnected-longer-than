@@ -1,5 +1,5 @@
 # Logoff-Horizon-Sessions-Disconnected-Longer-Than
-Show and Logoff Horizon Sessions Disconnected more than hours specified.
+Show and Logoff Horizon Sessions Disconnected longer than hours specified.
 
 ***<u>There is no support for this tool - it is provided as-is</u>***
 
@@ -54,8 +54,20 @@ Choose **2** to return all Disconnected Horizon Sessions.  The logon and disconn
 
 #### Show / Logoff Sessions Disconnected more than X Hours
 
-Choose **3** to return all Sessions Disconnected longer than the number of hours you specify.  You will be prompted to enter the number of hours - this will show all sessions that have been disconnected longer than the number of hours you specify.  
+Choose **3** to return all Sessions Disconnected longer than the number of hours you specify.  You will be prompted to enter the number of hours - this will show all sessions that have been disconnected longer than the number of hours you specify.  In this example we will choose 8 hours.
 
    ![Sessions](https://github.com/chrisdhalstead/logoff-horizon-sessions-disconnected-longer-than/blob/main/Images/disconnectedhours.PNG)
 
    ![Sessions](https://github.com/chrisdhalstead/logoff-horizon-sessions-disconnected-longer-than/blob/main/Images/disconnectedsessions.PNG)
+
+You will now be presented with a menu to **1** Logoff all sessions or **2** to do nothing and return to previous menu.
+
+   ![Sessions](https://github.com/chrisdhalstead/logoff-horizon-sessions-disconnected-longer-than/blob/main/Images/disc_menu.PNG)
+
+Choose to Logoff the sessions and they are logged off immediately.
+
+   ![Sessions](https://github.com/chrisdhalstead/logoff-horizon-sessions-disconnected-longer-than/blob/main/Images/logoff.PNG)
+
+We can now see that there are no sessions that have been disconnected over 8 hours.
+
+   ![Sessions](https://github.com/chrisdhalstead/logoff-horizon-sessions-disconnected-longer-than/blob/main/Images/no_disc.PNG)
