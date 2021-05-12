@@ -182,11 +182,13 @@ if ($ssessionoutput.results.count -eq 0)
 
 $tzone = Get-TimeZone 
 
+
+
 $newsessions = @()
 
   foreach ($session in $ssessionoutput.results)
   {
-    if ($session.sessiondata.DisconnectTime -ne "")
+    if ($null -ne $session.sessiondata.DisconnectTime)
       {
         if ($session.sessiondata.DisconnectTime -lt $soldUTCtime)
         {
@@ -195,7 +197,6 @@ $newsessions = @()
       }
   }
   
-
 if ($newsessions.count -eq 0)
 
 {
