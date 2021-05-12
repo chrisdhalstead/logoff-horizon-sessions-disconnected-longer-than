@@ -50,12 +50,12 @@ Choose **1** to Login to a Horizon Connection Server
 
 Choose **2** to return all Disconnected Horizon Sessions.  The logon and disconnect time will be shown in the local time zone where the script is run.
 
-   ![Sessions](https://github.com/chrisdhalstead/logoff-horizon-sessions-disconnected-longer-than/blob/main/Images/disconnected.png)
+   ![Sessions](https://github.com/chrisdhalstead/logoff-horizon-sessions-disconnected-longer-than/blob/main/Images/disconnected.PNG)
 
 #### Show / Logoff Sessions Disconnected more than X Hours
 
 Choose **3** to return all Sessions Disconnected longer than the number of hours you specify.  You will be prompted to enter the number of hours - this will show all sessions that have been disconnected longer than the number of hours you specify.  
 
-   ![Sessions](https://github.com/chrisdhalstead/logoff-horizon-sessions-disconnected-longer-than/blob/main/Images/disconnectedhours.png)
+   ![Sessions](https://github.com/chrisdhalstead/logoff-horizon-sessions-disconnected-longer-than/blob/main/Images/disconnectedhours.PNG)
 
-   ![Sessions](https://github.com/chrisdhalstead/logoff-horizon-sessions-disconnected-longer-than/blob/main/Images/disconnectedsessions.png)
+   ![Sessions](https://github.com/chrisdhalstead/logoff-horizon-sessions-disconnected-longer-than/blob/main/Images/disconnectedsessions.PNG)
