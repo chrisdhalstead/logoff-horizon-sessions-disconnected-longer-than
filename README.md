@@ -44,7 +44,7 @@ Choose **1** to Login to a Horizon Connection Server
 
   You will see that you are now logged in to Horizon - click enter to go back to the menu
 
-   ![Login](https://github.com/chrisdhalstead/logoff-horizon-sessions-disconnected-longer-than/main/Images/Login.PNG)
+   ![Login](https://github.com/chrisdhalstead/logoff-horizon-sessions-disconnected-longer-than/blob/main/Images/Login.PNG)
 
 #### Show all Disconnected Sessions
 
