@@ -126,9 +126,13 @@ Function GetDisconnectedSessionsOlderThan {
   }
      
   try {
-          
-    
-    $sHours = Read-Host -Prompt 'Enter Number of Hours Disconnected'
+
+    do 
+    {   
+      $sHours = Read-Host -Prompt 'Enter Number of Hours Disconnected'
+    }
+    until ($shours -ne "")
+
     $ts = New-TimeSpan -Hours $sHours
     $soldutctime = [System.DateTime]::UtcNow - $ts
 
@@ -178,9 +182,7 @@ if ($ssessionoutput.results.count -eq 0)
   break   
  }
 
-write-host "There are" $ssessionoutput.results.Count "total disconnected sessions"
 $tzone = Get-TimeZone 
-write-host "Showing Session Start and Disconnect Times in" $tzone
 
 $newsessions = @()
 
@@ -194,15 +196,17 @@ $newsessions = @()
         }
       }
   }
-
-write-host "There are" $newsessions.Count "Sessions Disconected Longer than"$sHours" Hours"
+  
 
 if ($newsessions.count -eq 0)
 
 {
+  write-host "There are no sessions disconnected longer than" $sHours "hour(s)"
   break
 }
 
+write-host "There are" $newsessions.count "sessions disconnected longer than" $sHours "hour(s)"
+write-host "Showing Session Start and Disconnect Times in" $tzone
 #Write results to table
 $newsessions | Format-table -AutoSize -Property @{Name = 'Session Start Time'; Expression = {[System.TimeZoneInfo]::ConvertTimeFromUtc($_.sessiondata.startTime,$tzone)}},@{Name = 'Session State'; Expression = {$_.sessiondata.sessionstate}},@{Name = 'Session Disconnect Time'; Expression = {[System.TimeZoneInfo]::ConvertTimeFromUtc($_.sessiondata.DisconnectTime,$tzone)}},@{Name = 'Username'; Expression = {$_.namesdata.username}},@{Name = 'Pool Name'; Expression = {$_.namesdata.desktopname}},@{Name = 'Machine Name'; Expression = {$_.namesdata.machineorrdsservername}}`
 
