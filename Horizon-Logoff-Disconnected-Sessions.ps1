@@ -1,18 +1,16 @@
 
 <#
 .SYNOPSIS
-Script to output Horizon Session data to .CSV via PowerCLI
+Show / Logoff Horizon Disconnected Sessions by hours
 	
 .NOTES
-  Version:        1.1
+  Version:        1.0
   Author:         Chris Halstead - chalstead@vmware.com
-  Creation Date:  1/20/2021
-  Purpose/Change: Updated for > 1,000 sessions and added Session Start Time
+  Creation Date:  5/12/2021
+  Purpose/Change: Initial Release
 
   Thanks to Wouter Kursten for the guidance on returning more than 1,000 objects in this article:
   https://www.retouw.nl/2017/12/12/get-hvmachine-only-finds-1000-desktops/
-
-  Also thanks to feedback on code.vmware.com I added Session Start Time
   
  #>
 
